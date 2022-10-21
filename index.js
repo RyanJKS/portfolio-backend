@@ -20,7 +20,7 @@ app.get('/crypto-quote/:symbol',(req,res)=>{
     axios.request(options).then(function (response) {
         res.json([symbolGet,response.data]);
       }).catch(function (error) {
-        console.error(error);
+        res.json(error)
       });
     
     })
